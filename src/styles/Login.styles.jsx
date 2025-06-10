@@ -11,6 +11,26 @@ export const Logo = styled.img`
 `;
 
 // CONTAINER: agora responsivo
+// export const Container = styled.div`
+//   width: 756.5px;
+//   height: 498px;
+//   display: flex;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+//   border-radius: 20px;
+//   overflow: hidden;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+
+//   @media (max-width: 768px) {
+//     flex-direction: column;
+//     width: 90%;
+//     height: auto;
+//     max-width: 400px;
+//   }
+// `;
+
 export const Container = styled.div`
   width: 756.5px;
   height: 498px;
@@ -24,12 +44,19 @@ export const Container = styled.div`
   transform: translate(-50%, -50%);
 
   @media (max-width: 768px) {
+    position: static; /* <-- remove a centralização absoluta */
+    transform: none;
+    top: auto;
+    left: auto;
+
     flex-direction: column;
     width: 90%;
     height: auto;
     max-width: 400px;
+    margin: 20px auto; /* <-- centraliza com margem */
   }
 `;
+
 
 // LOGIN BOX: ajustado para ocupar toda a largura em telas pequenas
 export const LoginBox = styled.div`
