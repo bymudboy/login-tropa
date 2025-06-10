@@ -114,6 +114,7 @@ export const Subtitle = styled.p`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 export const Label = styled.label`
@@ -179,10 +180,15 @@ export const PasswordWrapper = styled.div`
 
 export const ShowPasswordButton = styled.button`
   position: absolute;
-  right: 10px;
+  right: 16px;
   top: 40%;
   transform: translateY(-50%);
   background: transparent;
   border: none;
   cursor: pointer;
+
+  img {
+  width: 20px;
+  height: 20px;
+  }
 `;
