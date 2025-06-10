@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
-
+// Logo: já está ok
 export const Logo = styled.img`
   display: block;
-  margin: 0 auto 1.5rem;  /* centraliza horizontalmente e dá margem embaixo */
-  width: 170px;            /* ajuste o tamanho da logo */
+  margin: 0 auto 1.5rem;
+  width: 170px;
   height: auto;
-  margin-left: 0;         /* alinha à esquerda */
-  margin-right: auto;     /* garante que não centralize */
+  margin-left: 0;
+  margin-right: auto;
 `;
 
-
+// CONTAINER: agora responsivo
 export const Container = styled.div`
   width: 756.5px;
   height: 498px;
@@ -22,21 +22,33 @@ export const Container = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    max-width: 400px;
+  }
 `;
 
-
+// LOGIN BOX: ajustado para ocupar toda a largura em telas pequenas
 export const LoginBox = styled.div`
   flex: 1;
   padding: 40px;
   background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: flex-start; /* alinha conteúdo à esquerda */
-  text-align: left; /* garante que o texto fique alinhado à esquerda */
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+  }
 `;
 
-  export const ImageBox = styled.div`
+// IMAGE BOX: imagem não some e se ajusta
+export const ImageBox = styled.div`
   flex: 1;
   padding: 40px;
   background: white url(${props => props.fundo}) no-repeat center center;
@@ -48,15 +60,42 @@ export const LoginBox = styled.div`
     position: absolute;
     top: 204px;
     left: 39px;
-    bottom: -23.5px;
-    transform: translate(-20%, -10%);
     width: 357px;
     height: 316px;
     background: url(${props => props.imagem}) no-repeat center center;
     background-size: contain;
+    transform: translate(-20%, -10%);
+  }
+
+  @media (max-width: 768px) {
+    background-size: 100% auto;
+    padding: 30px;
+    height: 300px;
+    min-height: 280px;
+
+    &::after {
+      top: 30px;
+      left: 55px;
+      width: 280px;
+      height: 250px;
+      transform: translate(0, 0);
+    }
+  }
+
+  @media (max-width: 400px) {
+    padding: 20px;
+    height: 250px;
+
+    &::after {
+      top: 90px;
+      left: 49px;
+      width: 240px;
+      height: 210px;
+    }
   }
 `;
 
+// TIPOGRAFIA
 export const Title = styled.h1`
   font-size: 25px;
   font-weight: bold;
@@ -71,6 +110,7 @@ export const Subtitle = styled.p`
   text-align: left;
 `;
 
+// FORMULÁRIO
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -91,27 +131,26 @@ export const Input = styled.input`
   border: none;
   border-radius: 100px;
   margin-bottom: 20px;
-  transition: border-color 0.3s;
   background-color: #F6F6F6;
-  
 
   &:focus {
     border-color: #CC6237;
     outline: none;
   }
 
- 
-
   &::placeholder {
-    color: #657593;  /* Cor do placeholder */
-    }
+    color: #657593;
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 `;
 
 export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   background-color: #CC6237;
   color: white;
   font-weight: 500;
@@ -122,16 +161,20 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 18px;
   transition: background-color 0.3s;
-  text-align: center;
+  
 
   &:hover {
     background-color: rgb(148, 63, 29);
   }
-`;
+  @media (max-width: 400px) {
+    width: 100%;
+    margin: 0 auto;
+  }
+`;  
 
 export const PasswordWrapper = styled.div`
   position: relative;
-  width: 100%;  /* para input ocupar todo o espaço disponível */
+  width: 100%;
 `;
 
 export const ShowPasswordButton = styled.button`
@@ -142,6 +185,4 @@ export const ShowPasswordButton = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  
 `;
-
