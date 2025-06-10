@@ -16,6 +16,10 @@ import {
 } from "../styles/Login.styles";
 import logoImg from "../img/logo.png";
 import eyeIcon from "../img/eye.png";
+import fundoImg from '../img/fundo.png';
+import imagemImg from '../img/imagem.png';
+
+
 
 export default function Login({ setIsLoggedIn }) {
   const [email, setEmail] = useState("");
@@ -26,10 +30,9 @@ export default function Login({ setIsLoggedIn }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Aqui você pode fazer uma validação simples, ex: só se email e senha existirem
     if (email && password) {
-      setIsLoggedIn(true); // marca o usuário como logado
-      navigate("/dashboard"); // redireciona para o Dashboard
+      setIsLoggedIn(true); 
+      navigate("/dashboard"); 
     }
   };
 
@@ -72,7 +75,8 @@ export default function Login({ setIsLoggedIn }) {
         </Form>
       </LoginBox>
 
-      <ImageBox />
+      <ImageBox fundo={fundoImg} imagem={imagemImg} />
+
     </Container>
   );
 }

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Logo = styled.img`
   display: block;
   margin: 0 auto 1.5rem;  /* centraliza horizontalmente e dá margem embaixo */
@@ -35,23 +36,23 @@ export const LoginBox = styled.div`
   text-align: left; /* garante que o texto fique alinhado à esquerda */
 `;
 
-export const ImageBox = styled.div`
+  export const ImageBox = styled.div`
   flex: 1;
   padding: 40px;
-  background: white url(../src/img/fundo.png) no-repeat center center;
+  background: white url(${props => props.fundo}) no-repeat center center;
   background-size: 355.5px 478px;
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
-    top: 172px /* centraliza verticalmente */
-    left: 20px; /* centraliza horizontalmente */
+    top: 204px;
+    left: 39px;
     bottom: -23.5px;
-    transform: translate(-20%, -10%); /* move um pouco para a esquerda e para baixo */
-    width: 357px; 
+    transform: translate(-20%, -10%);
+    width: 357px;
     height: 316px;
-    background: url(../src/img/imagem.png) no-repeat center center;
+    background: url(${props => props.imagem}) no-repeat center center;
     background-size: contain;
   }
 `;
