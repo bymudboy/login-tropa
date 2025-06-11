@@ -4,6 +4,10 @@ export const Container = styled.div`
   display: flex;
   height: 100vh;
   background-color: #f4f4f4;
+  
+  @media (max-width: 768px) {
+  flex-direction: column;
+}
 `;
 
 export const SidebarContainer = styled.div`
@@ -14,6 +18,28 @@ export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 12px;
+    gap: 12px;
+  }
+
+  @media (max-width: 400px) {
+  padding: 12px 8px;
+  gap: 8px;
+
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 `;
 
 export const LogoIcon = styled.div`
@@ -71,12 +97,27 @@ export const Divider = styled.hr`
   height: 1px;
   background-color: #a3a3a3;
   margin: 42px 14px;
+
+   @media (max-width: 431px) {
+    margin: 2px 0;
+    width: 70%; 
+  }
 `;
 
 export const Profile = styled.div`
   display: flex;
   align-items: center;
   margin-left: 27px;
+  
+  @media (max-width: 365px) {
+    margin: 2px 0;
+    width: 100%;  
+    }
+
+  @media (max-width: 431px) {
+    margin: 2px 0;
+    width: 40%; 
+  }
 `;
 
 export const UserInfo = styled.div`
@@ -93,6 +134,10 @@ export const UserInfo = styled.div`
     font-size: 11px;
     color: gray;
   }
+
+  @media (max-width: 365px) {
+    width: 80%;  
+    }
 `;
 
 export const ActionButtons = styled.div`
@@ -133,6 +178,20 @@ export const ActionButtons = styled.div`
         fill: currentColor !important;
       }
     }
+
+     @media (max-width: 431px) {
+    flex-direction: row;
+    justify-content: center;
+     
+
+     &:nth-child(1) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 40px;
+    }
+  }
   }
 `;
 
@@ -144,6 +203,11 @@ export const Content = styled.div`
 export const Apresentacao = styled.div`
   background-color: #f4f4f4;
   padding: 8px;
+
+  @media (max-width: 768px) {
+  font-size: 14px;
+  text-align: center;
+}
 `;
 
 export const Header = styled.div`
@@ -151,6 +215,11 @@ export const Header = styled.div`
   color: #cc6237;
   padding: 8px;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+  font-size: 14px;
+  text-align: center;
+}
 `;
 
 export const Eventos = styled.div`
@@ -176,6 +245,14 @@ export const Eventos = styled.div`
     font-size: 14px;
     color: gray;
   }
+
+  @media (max-width: 400px) {
+    height: 390px;
+  }
+  @media (max-width: 600px) {
+    height: 380px;
+  }
+  
 `;
 
 export const InputWrapper = styled.div`
@@ -184,22 +261,53 @@ export const InputWrapper = styled.div`
   right: 20px;
   display: flex;
   gap: 10px;
+
+   @media (max-width: 376px) { // modelo
+    position: absolute;
+    top: 20px;
+    right: 1px;
+    display: flex;
+    gap: 10px;
+  }
+   @media (max-width: 365px) { 
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    display: flex;
+    gap: 10px;
+  }
+
+  @media (max-width: 400px) {
+    justify-content: right;
+    margin-right: -8px;
+   
+  }
+  @media (max-width: 600px) {
+    justify-content: center;
+    padding-bottom: 50px;
+    margin-right: -2px;
+   
+  }
+
+  @media (max-width: 344px) {
+  justify-content: left;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 4px;
+  padding-bottom: 40px;
+  margin-left: 10px;
+ left: 1px;
+  
+
+  button {
+    padding: 4px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+ 
 `;
-
-// export const InputContainer = styled.div`
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-// `;
-
-// export const Input = styled.input`
-//   background-color: orange;
-//   padding: 8px;
-//   border: none;
-//   border-radius: 33px;
-//   background-color: #F6F6F6;
-//   background: url('../img/buscar-eventos-icon.svg') no-repeat 8px left;
-// `;
 
 export const BotaoInserir = styled.button`
   padding: 8px 12px;
@@ -220,6 +328,14 @@ export const BotaoInserir = styled.button`
 
   &:hover {
     background-color: rgb(168, 64, 23);
+}
+     @media (max-width: 400px) {
+    width: 40%;
+   
+  }
+     @media (max-width: 600px) {
+    width: 40%;
+   
   }
 `;
 
@@ -231,6 +347,15 @@ export const InputComIcone = styled.div`
   border-radius: 33px;
   background-color: #f6f6f6;
   background: url("../img/buscar-eventos-icon.svg") no-repeat 8px left;
+
+  @media (max-width: 400px) {
+    width: 48%;
+    
+}
+  @media (max-width: 600px) {
+    width: 48%;
+    
+}
 `;
 
 export const IconeBusca = styled.img`
@@ -254,14 +379,18 @@ export const TableContainer = styled.div`
   margin-top: 20px;
   border-radius: 8px;
   background: #ffffff;
-  // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
+
+  @media (max-width: 600px) {
+    margin-bottom: 50px;
+  }
 `;
 
 export const TabelaEventos = styled.table`
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 2px;
+  min-width: 600px; // n sei se ajudou ou atrapalhou
 
   thead {
     background: #ffffff;
@@ -318,6 +447,12 @@ export const TabelaEventos = styled.table`
   tr.linha-um td {
     padding: 4px;
   }
+
+  @media (max-width: 400px) {
+    padding-bottom: 30px;
+    
+  }
+  
 `;
 
 export const ButtonOpcoes = styled.button`
@@ -401,4 +536,41 @@ export const BottomButtonsContainer = styled.div`
       color: black;
     }
   }
+
+  @media (max-width: 360px) {
+  width: 100%;
+  height: auto;
+  left: -1px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+  @media (max-width: 768px) {
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+ 
+}
+  @media (max-width: 344px) {
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 8px auto 0;
+  flex-wrap: nowrap;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6px;
+
+  button {
+    padding: 6px 10px;
+    font-size: 12px;
+    white-space: nowrap; 
+  }
+}
+
+  
 `;

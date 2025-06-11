@@ -48,10 +48,10 @@ const eventos = [
     data: "09 a 11 de Junho",
   },
   {
-    nome: "Corrida Ecológica Amazônia",
-    totalEquipes: 15,
+    nome: "Clube do Laço Coração Pantaneiro",
+    totalEquipes: 10,
     status: "Ativo",
-    data: "01 a 03 de Maio",
+    data: "09 a 11 de Junho",
   },
 ];
 
@@ -61,7 +61,7 @@ const Dashboard = () => {
       <SidebarContainer>
         <LogoIcon />
 
-        <Menu>
+        <Menu className="menu">
           <MenuTitle>MENU</MenuTitle>
           <MenuItem>
             <DashboardIcon />
@@ -83,13 +83,14 @@ const Dashboard = () => {
 
         <Divider />
 
-        <Profile>
-          <AdmIcon />
-          <UserInfo>
-            <strong>Kaique Steck</strong>
-            <span>Administrador</span>
-          </UserInfo>
-        </Profile>
+          <Profile className="profile">
+            <AdmIcon />
+            <UserInfo>
+              <strong>Kaique Steck</strong>
+              <span>Administrador</span>
+            </UserInfo>
+          </Profile>
+        
 
         <ActionButtons>
           <button>
