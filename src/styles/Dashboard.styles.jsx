@@ -102,6 +102,10 @@ export const Divider = styled.hr`
     margin: 2px 0;
     width: 70%; 
   }
+   @media (max-width: 769px) {
+    margin: 2px 0;
+    width: 50%; 
+  }
 `;
 
 export const Profile = styled.div`
@@ -192,6 +196,18 @@ export const ActionButtons = styled.div`
       margin-left: 40px;
     }
   }
+     @media (max-width: 789px) {
+    flex-direction: row;
+    justify-content: center;
+     
+     &:nth-child(1) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 40px;
+    }
+  }
   }
 `;
 
@@ -252,7 +268,6 @@ export const Eventos = styled.div`
   @media (max-width: 600px) {
     height: 380px;
   }
-  
 `;
 
 export const InputWrapper = styled.div`
@@ -305,8 +320,6 @@ export const InputWrapper = styled.div`
     white-space: nowrap;
   }
 }
-
- 
 `;
 
 export const BotaoInserir = styled.button`
@@ -334,8 +347,7 @@ export const BotaoInserir = styled.button`
    
   }
      @media (max-width: 600px) {
-    width: 40%;
-   
+    width: 40%; 
   }
 `;
 
@@ -450,9 +462,7 @@ export const TabelaEventos = styled.table`
 
   @media (max-width: 400px) {
     padding-bottom: 30px;
-    
   }
-  
 `;
 
 export const ButtonOpcoes = styled.button`
@@ -571,6 +581,4 @@ export const BottomButtonsContainer = styled.div`
     white-space: nowrap; 
   }
 }
-
-  
 `;

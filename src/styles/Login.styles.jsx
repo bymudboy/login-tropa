@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// Logo: já está ok
 export const Logo = styled.img`
   display: block;
   margin: 0 auto 1.5rem;
@@ -9,27 +8,6 @@ export const Logo = styled.img`
   margin-left: 0;
   margin-right: auto;
 `;
-
-// CONTAINER: agora responsivo
-// export const Container = styled.div`
-//   width: 756.5px;
-//   height: 498px;
-//   display: flex;
-//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-//   border-radius: 20px;
-//   overflow: hidden;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-
-//   @media (max-width: 768px) {
-//     flex-direction: column;
-//     width: 90%;
-//     height: auto;
-//     max-width: 400px;
-//   }
-// `;
 
 export const Container = styled.div`
   width: 756.5px;
@@ -57,8 +35,6 @@ export const Container = styled.div`
   }
 `;
 
-
-// LOGIN BOX: ajustado para ocupar toda a largura em telas pequenas
 export const LoginBox = styled.div`
   flex: 1;
   padding: 40px;
@@ -74,7 +50,6 @@ export const LoginBox = styled.div`
   }
 `;
 
-// IMAGE BOX: imagem não some e se ajusta
 export const ImageBox = styled.div`
   flex: 1;
   padding: 40px;
@@ -122,7 +97,6 @@ export const ImageBox = styled.div`
   }
 `;
 
-// TIPOGRAFIA
 export const Title = styled.h1`
   font-size: 25px;
   font-weight: bold;
@@ -137,7 +111,6 @@ export const Subtitle = styled.p`
   text-align: left;
 `;
 
-// FORMULÁRIO
 export const Form = styled.form`
   display: flex;
   flex-direction: column;

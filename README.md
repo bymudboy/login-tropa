@@ -1,12 +1,19 @@
-# React + Vite
+# Tropa Digital
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação feita com React e Vite. Tem uma tela de login que leva para uma página de dashboard após o acesso.
 
-Currently, two official plugins are available:
+## Tecnologias utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** com **Vite**
+- **Styled Components** e **CSS Modules** para estilização
 
-## Expanding the ESLint configuration
+## Acesso ao projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Deploy: [Acesse aqui](https://login-tropa.vercel.app/)
+- Repositório: [GitHub](https://github.com/bymudboy/login-tropa)
+
+## Sobre
+
+A ideia foi criar uma estrutura simples e funcional com login e dashboard, focando em organização, componentização e uso de boas práticas.
+
+---

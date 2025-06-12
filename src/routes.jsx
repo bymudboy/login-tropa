@@ -20,7 +20,6 @@ export default function AppRoutes() {
             isLoggedIn ? <Dashboard /> : <Navigate to="/login" replace />
           } 
         />
-        {/* Redireciona a rota principal para login */}
         <Route 
           path="*" 
           element={<Navigate to="/login" replace />} 
